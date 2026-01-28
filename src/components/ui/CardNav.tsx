@@ -4,15 +4,11 @@ import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import "./CardNav.css";
 import { RefreshCCWDotIcon } from "./refresh-ccw-dot";
-import { Link, useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { routes } from "@/constants/routes";
 import { megaMenu } from "@/constants/megaMenu";
 
-export const CardNav = ({
-  className = "",
-  ease = "power3.out",
-  menuColor,
-}: any) => {
+export const CardNav = ({ className = "", ease = "power3.out" }: any) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const navRef = useRef<any>(null);
