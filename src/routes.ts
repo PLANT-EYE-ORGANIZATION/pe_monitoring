@@ -1,15 +1,9 @@
 import { createBrowserRouter } from "react-router";
+import { RootLayout } from "@/components/layouts/";
+import { MainLayout } from "./components/layouts/mainLayout";
+import { routes } from "./constants/routes";
 
-import { RootLayout, MainLayout } from "@/components/layouts/";
-import {
-  AerationControl,
-  HomePage,
-  LoginPage,
-  CropMeasurement,
-  Sensors,
-} from "./pages";
-
-export const routes = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
@@ -17,16 +11,10 @@ export const routes = createBrowserRouter([
       {
         Component: MainLayout,
         children: [
-          { index: true, Component: HomePage },
-          { path: "/crop-measurement", Component: CropMeasurement },
-          { path: "/aeration-control", Component: AerationControl },
-          { path: "/sensors", Component: Sensors },
+          ...(routes.private.map(({ name, ...rest }: any) => rest) || []),
         ],
       },
-      {
-        path: "/login",
-        Component: LoginPage,
-      },
+      ...(routes.public || []),
     ],
   },
 ]);

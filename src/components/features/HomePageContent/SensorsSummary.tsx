@@ -86,7 +86,7 @@ export const SensorsSummarySection = () => {
   return (
     <div className="bg-gradient-to-br from-green-50 to-blue-50">
       <div className="space-y-3">
-        <h2 className="border p-6 rounded-xl text-3xl font-bold">
+        <h2 className="border p-6 rounded-xl text-xl font-bold">
           Sensors Pulse
         </h2>
 

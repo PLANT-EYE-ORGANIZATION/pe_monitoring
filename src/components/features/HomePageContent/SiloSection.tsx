@@ -1,4 +1,4 @@
-import GlassIcons from "@/components/GlassIcons";
+import GlassIcons from "@/components/ui/GlassIcons";
 import { Card } from "@/components/ui/card";
 import { AlarmCard } from "./AlarmCard";
 
@@ -29,14 +29,14 @@ export const SiloSection = () => {
   return (
     <div className="grid grid-cols-2 gap-6 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="space-y-3">
-        <h2 className="border p-6 rounded-xl text-3xl font-bold">All Silo</h2>
+        <h2 className="border p-6 rounded-xl text-xl font-bold">All Silo</h2>
 
         <Card className="px-6 py-10">
           <GlassIcons items={items} className="custom-class" colorful={false} />
         </Card>
       </div>
       <div className="space-y-3">
-        <h2 className="border p-6 rounded-xl text-3xl font-bold">All Alarm</h2>
+        <h2 className="border p-6 rounded-xl text-xl font-bold">All Alarm</h2>
 
         <Card className="p-4">
           <div className="grid grid-cols-5 gap-6">

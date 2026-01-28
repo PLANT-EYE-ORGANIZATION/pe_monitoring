@@ -71,7 +71,7 @@ export const TemperatureSummary = () => {
   return (
     <div className="mx-auto bg-gradient-to-br from-green-50 to-blue-50 space-y-4">
       <div>
-        <h2 className="border p-6 rounded-xl text-3xl font-bold">
+        <h2 className="border p-6 rounded-xl text-xl font-bold">
           Temperature Summary
         </h2>
       </div>
